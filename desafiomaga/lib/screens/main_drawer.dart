@@ -1,5 +1,6 @@
 import 'package:desafiomaga/screens/tarefa1.dart';
 import 'package:desafiomaga/screens/tarefa2.dart';
+import 'package:desafiomaga/screens/tarefa3.dart';
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -32,14 +33,14 @@ class MainDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.task, size: 16),
             title: const Text("Tarefa 3"),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Tarefa3()));
+            },
           ),
           ListTile(
             leading: const Icon(Icons.task, size: 16),
             title: const Text("Tarefa 4"),
-          ),
-          ListTile(
-            leading: const Icon(Icons.task, size: 16),
-            title: const Text("Tarefa 5"),
           ),
         ],
       ),

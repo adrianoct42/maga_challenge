@@ -53,6 +53,11 @@ class _Tarefa2State extends State<Tarefa2> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Text(
+              "Aguarde alguns segundos enquanto a API busca os dados, caso inicialmente apareça null!",
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 30),
             Text(
               "Temperature: $temperature°C",
               style: TextStyle(

@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: theme2,
-      home: const Tarefa2(),
+      theme: theme1,
+      home: const Tarefa1(),
     );
   }
 }
