@@ -1,6 +1,8 @@
+import "package:desafiomaga/model/model_theme.dart";
 import "package:desafiomaga/model/weather_model.dart";
 import "package:desafiomaga/screens/main_drawer.dart";
 import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 
 class Tarefa2 extends StatefulWidget {
   const Tarefa2({super.key});
@@ -40,57 +42,73 @@ class _Tarefa2State extends State<Tarefa2> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Tarefa 2",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
-      ),
-      drawer: MainDrawer(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              "Aguarde alguns segundos enquanto a API busca os dados, caso inicialmente apareça null!",
-              textAlign: TextAlign.center,
+    return Consumer<ModelTheme>(
+      builder: (context, ModelTheme themeNotifier, child) {
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text(
+              "Tarefa 2",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 30),
-            Text(
-              "Temperature: $temperature°C",
-              style: TextStyle(
-                fontSize: 20.0,
+            actions: [
+              IconButton(
+                icon: Icon(themeNotifier.isDark
+                    ? Icons.nightlight_round
+                    : Icons.wb_sunny),
+                onPressed: () {
+                  themeNotifier.isDark
+                      ? themeNotifier.isDark = false
+                      : themeNotifier.isDark = true;
+                },
               ),
-            ),
-            Text(
-              "Condition: $condition",
-              style: TextStyle(
-                fontSize: 20.0,
-              ),
-            ),
-            Text(
-              "Humidity: $humidity",
-              style: TextStyle(
-                fontSize: 20.0,
-              ),
-            ),
+            ],
+          ),
+          drawer: MainDrawer(),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text(
+                  "Aguarde alguns segundos enquanto a API busca os dados, caso inicialmente apareça null!",
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 30),
+                Text(
+                  "Temperature: $temperature°C",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+                Text(
+                  "Condition: $condition",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+                Text(
+                  "Humidity: $humidity",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
 /*             Text(
               "Country: $country",
               style: TextStyle(
                 fontSize: 20.0,
               ),
             ), */
-            Text(
-              "City: $city",
-              style: TextStyle(
-                fontSize: 20.0,
-              ),
+                Text(
+                  "City: $city",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

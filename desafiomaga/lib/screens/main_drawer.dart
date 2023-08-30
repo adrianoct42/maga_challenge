@@ -38,10 +38,6 @@ class MainDrawer extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const Tarefa3()));
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.task, size: 16),
-            title: const Text("Tarefa 4"),
-          ),
         ],
       ),
     );

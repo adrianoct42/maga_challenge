@@ -10,7 +10,7 @@ var products = [
   Product("Pipa de Morcego", 30, "assets/PipaMorcego.jpg",
       "Meu primo tinha uma dessas e a gente se divertia demais no condomínio dele. Essa praga voava tão longe e tão bem que advinha? Uma hora voou pro além mesmo e só sobrou nosso choro."),
   Product("Super Nintendo", 400, "assets/SNES.jpg",
-      "Até hoje é meu console favorito. Lotado de coisa boa e jogos que simplesmente o mercado indie atual tenta replicar aquela perfeição pixelada. Eram tempos simples e muito felizes (meu Deus eu tô muito nostálgico!)"),
+      "Até hoje é meu console favorito. Lotado de coisa boa e jogos que simplesmente o mercado indie atual tenta replicar com algum esplendor, a tal era dos pixels 16bits. As vezes eles conseguem. Eram tempos simples e muito felizes (meu Deus eu tô muito nostálgico)."),
   Product("Castlevania: Symphony of The Night", 50, "assets/SOTN.jpg",
       "Um dos jogos mais importantes da minha vida. Me introduziu ao gênero -tipo metroid- e causa boa impressão até em quem nunca se aventurou por ele nos dias de hoje. Uma combinação supimpa de exploração, visual, música e fator replay. Symphony of The Night é uma pérola atemporal."),
 ];
